@@ -1,6 +1,7 @@
 import pytest
 import json
 import assurance_connections
+import os
 
 sandbox_base_url = "https://api.sandbox.bureau.id/"
 production_base_url = "https://api.bureau.id/"

@@ -26,10 +26,10 @@ jobs:
       - name: Install requests
         run: |
           pip install requests
-          pip install pytest
       - name: Test with pytest
         env: 
           PROD_API_KEY: ${{ secrets.PROD_API_KEY }}
           SANDBOX_API_KEY: ${{ secrets.SANDBOX_API_KEY }}
         run: |
+          pip install pytest
           pytest

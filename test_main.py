@@ -5,13 +5,16 @@ import assurance_connections
 sandbox_base_url = "https://api.sandbox.bureau.id/"
 production_base_url = "https://api.bureau.id/"
 
+prod_key = 'os.environ['PROD_API_KEY']'
+sandbox_key = 'os.environ['SANDBOX_API_KEY']'
+
 headers_production = {
-  'X-Bureau-Auth-API-Key': 'os.environ['PROD_API_KEY']',
+  'X-Bureau-Auth-API-Key': prod_key,
   'Content-Type': 'application/json'
 }
 
 headers_sandbox = {
-  'X-Bureau-Auth-API-Key': 'os.environ['SANDBOX_API_KEY']',
+  'X-Bureau-Auth-API-Key': sandbox_key,
   'Content-Type': 'application/json'
 }
 

@@ -25,4 +25,5 @@ jobs:
         SANDBOX_API_KEY: ${{ secrets.SANDBOX_API_KEY }}
       run: |
         pip install pytest
-        pytest
+        pytest --junitxml=/reports
+

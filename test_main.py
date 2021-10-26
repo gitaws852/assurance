@@ -32,7 +32,7 @@ def test_set_params():
 """
 
 
-value == 1
+value = 1
 
 if value == 0:
 	print("In this loop")
@@ -57,11 +57,11 @@ def test_user_fetch_signals_200():
 	assert response.status_code == 200
 
 def test_user_risk_score_200():
-	response = assurance_connections.user_risk_score(base_url = url, headers = header)
+	response = assurance_connections.user_risk_score(base_url = base_url, headers = headers)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_risk_score_v2_200():
-	response = assurance_connections.user_risk_score_v2(base_url = url, headers = header)
+	response = assurance_connections.user_risk_score_v2(base_url = base_url, headers = headers)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200

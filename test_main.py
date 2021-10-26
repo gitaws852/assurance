@@ -35,12 +35,12 @@ def test_set_params():
 value = str(test_env)
 print(value)
 
-if value == 0:
+if value == 's':
 	print("In this loop")
 	base_url = sandbox_base_url
 	headers = headers_sandbox
 	print("Testing in Sandbox")
-elif value == 1:
+elif value == 'p':
 	print("In this loop")
 	base_url = production_base_url
 	headers = headers_production

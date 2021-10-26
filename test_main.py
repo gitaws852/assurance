@@ -30,34 +30,29 @@ def test_set_params():
 		headers = headers_production
 		print("Testing in Production")
 """
-url = ""
-header = ""
 
-value = testing_env
-print(value)
+
+value == 1
 
 if value == 0:
 	print("In this loop")
-	url = sandbox_base_url
-	header = headers_sandbox
+	base_url = sandbox_base_url
+	headers = headers_sandbox
 	print("Testing in Sandbox")
 elif value == 1:
 	print("In this loop")
-	url = production_base_url
-	header = headers_production
+	base_url = production_base_url
+	headers = headers_production
 	print("Testing in Production")
 
 def test_user_name_match_200():
-	global url
-	global header
-	response = assurance_connections.user_name_match(base_url = url, headers = header)
+	response = assurance_connections.user_name_match(base_url = base_url, headers = headers)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_fetch_signals_200():
-	global url
-	global header
-	response = assurance_connections.user_fetch_signals(base_url = url, headers = header)
+
+	response = assurance_connections.user_fetch_signals(base_url = base_url, headers = headers)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 

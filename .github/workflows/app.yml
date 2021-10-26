@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
     inputs: 
       testing_environment:
-        description: 'Select 0 - sandbox / 1 - prod'
+        description: 'Select s - sandbox / p - prod'
         required: true
-        default: '1'
 jobs:
   build:
 

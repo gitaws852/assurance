@@ -34,6 +34,7 @@ def test_set_params():
 
 
 value = str(test_env)
+print(value)
 
 if value == 0:
 	print("In this loop")

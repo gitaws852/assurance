@@ -37,12 +37,12 @@ value = testing_env
 print(value)
 
 if value == 0:
-	print("In this loop)
+	print("In this loop")
 	url = sandbox_base_url
 	header = headers_sandbox
 	print("Testing in Sandbox")
 elif value == 1:
-	print("In this loop)
+	print("In this loop")
 	url = production_base_url
 	header = headers_production
 	print("Testing in Production")

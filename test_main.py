@@ -8,7 +8,7 @@ production_base_url = "https://api.bureau.id/"
 
 prod_key = os.environ['PROD_API_KEY']
 sandbox_key = os.environ['SANDBOX_API_KEY']
-testing_env = os.environ['environment']
+#testing_env = os.environ['environment']
 
 headers_production = {
   'X-Bureau-Auth-API-Key': prod_key,

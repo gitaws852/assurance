@@ -8,6 +8,7 @@ production_base_url = "https://api.bureau.id/"
 
 prod_key = os.environ['PROD_API_KEY']
 sandbox_key = os.environ['SANDBOX_API_KEY']
+test_env = os.environ['testing_environment']
 
 
 headers_production = {
@@ -32,7 +33,7 @@ def test_set_params():
 """
 
 
-value = testing_environment
+value = str(test_env)
 
 if value == 0:
 	print("In this loop")

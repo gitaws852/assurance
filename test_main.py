@@ -8,7 +8,7 @@ production_base_url = "https://api.bureau.id/"
 
 prod_key = os.environ['PROD_API_KEY']
 sandbox_key = os.environ['SANDBOX_API_KEY']
-#testing_env = os.environ['environment']
+
 
 headers_production = {
   'X-Bureau-Auth-API-Key': prod_key,
@@ -32,7 +32,7 @@ def test_set_params():
 """
 
 
-value = 1
+value = testing_environment
 
 if value == 0:
 	print("In this loop")

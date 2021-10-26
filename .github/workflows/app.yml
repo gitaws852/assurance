@@ -30,6 +30,7 @@ jobs:
         SANDBOX_API_KEY: ${{ secrets.SANDBOX_API_KEY }}
         env_value: ${{ github.event.inputs.testing_environment }}
       run: |
+        python test_main.py
         pip install pytest
         pytest
 

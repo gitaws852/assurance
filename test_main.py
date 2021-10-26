@@ -8,7 +8,7 @@ production_base_url = "https://api.bureau.id/"
 
 prod_key = os.environ['PROD_API_KEY']
 sandbox_key = os.environ['SANDBOX_API_KEY']
-test_env = os.environ['testing_environment']
+test_env = os.environ['environment']
 
 
 headers_production = {

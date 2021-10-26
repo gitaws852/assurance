@@ -42,11 +42,15 @@ elif value == 1:
 	print("Testing in Production")
 
 def test_user_name_match_200():
+	global url
+	global header
 	response = assurance_connections.user_name_match(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_fetch_signals_200():
+	global url
+	global header
 	response = assurance_connections.user_fetch_signals(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200

@@ -19,16 +19,23 @@ headers_sandbox = {
   'X-Bureau-Auth-API-Key': sandbox_key,
   'Content-Type': 'application/json'
 }
+"""
+def test_set_params():
+	if testing_env == 0:
+		base_url = sandbox_base_url
+		headers = headers_sandbox
+		print("Testing in Sandbox")
+	elif testing_env == 1:
+		base_url = production_base_url
+		headers = headers_production
+		print("Testing in Production")
+"""
 
-if testing_env == 0:
-	base_url = sandbox_base_url
+value = 0
+
+if value == 0:
+	base_url = sandbox_base_url 
 	headers = headers_sandbox
-	print("Testing in Sandbox")
-elif testing_env == 1:
-	base_url = production_base_url
-	headers = headers_production
-	print("Testing in Production")
-	
 
 def test_user_name_match_200():
 	response = assurance_connections.user_name_match(base_url = base_url, headers = headers)

@@ -33,30 +33,30 @@ def test_set_params():
 
 value = testing_env
 if value == 0:
-	base_url = sandbox_base_url
-	headers = headers_sandbox
+	url = sandbox_base_url
+	header = headers_sandbox
 	print("Testing in Sandbox")
 elif value == 1:
-	base_url = production_base_url
-	headers = headers_production
+	url = production_base_url
+	header = headers_production
 	print("Testing in Production")
 
 def test_user_name_match_200():
-	response = assurance_connections.user_name_match(base_url = base_url, headers = headers)
+	response = assurance_connections.user_name_match(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_fetch_signals_200():
-	response = assurance_connections.user_fetch_signals(base_url = base_url, headers = headers)
+	response = assurance_connections.user_fetch_signals(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_risk_score_200():
-	response = assurance_connections.user_risk_score(base_url = base_url, headers = headers)
+	response = assurance_connections.user_risk_score(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200
 
 def test_user_risk_score_v2_200():
-	response = assurance_connections.user_risk_score_v2(base_url = base_url, headers = headers)
+	response = assurance_connections.user_risk_score_v2(base_url = url, headers = header)
 	json_response = json.loads(response.text)
 	assert response.status_code == 200

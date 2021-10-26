@@ -3,7 +3,7 @@ name: Python application
 on: 
   workflow_dispatch:
     inputs: 
-      environment:
+      testing_environment:
         description: 'Select 0 - sandbox / 1 - prod'
         required: true
         default: '1'
@@ -28,7 +28,7 @@ jobs:
       env: 
         PROD_API_KEY: ${{ secrets.PROD_API_KEY }}
         SANDBOX_API_KEY: ${{ secrets.SANDBOX_API_KEY }}
-        environment: ${{ github.event.inputs.environment }}
+        environment: ${{ github.event.inputs.testing_environment }}
       run: |
         pip install pytest
         pytest

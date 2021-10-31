@@ -31,5 +31,5 @@ jobs:
         env_value: ${{ github.event.inputs.testing_environment }}
       run: |
         pip install pytest
-        pytest test_main.py
+        pytest test_webhook.py
 

@@ -31,10 +31,6 @@ def test_set_params():
 		print("Testing in Production")
 """
 
-
-value = str(test_env)
-print(value)
-
 if value == 's':
 	print("In this loop")
 	base_url = sandbox_base_url

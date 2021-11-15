@@ -1,8 +1,7 @@
-name: Test Management
+name: LOTL
 on: [workflow_dispatch]
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,4 +17,5 @@ jobs:
       run: |
         pip install requests
     - name: Test with pytest
+      run: |
         python test_lotl.py

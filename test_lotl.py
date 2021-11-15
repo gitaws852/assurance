@@ -11,5 +11,5 @@ payload={}
 headers = {}
 print(url)
 response = requests.request("GET", url, headers=headers, data=payload)
-assert response.status_code == 200
 print(response.text)
+print(response.status_code)

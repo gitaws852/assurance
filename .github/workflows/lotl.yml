@@ -1,4 +1,4 @@
-name: lotl
+name: Test Management
 on: [workflow_dispatch]
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade pip 
     - name: Install requests
       run: |
         pip install requests
